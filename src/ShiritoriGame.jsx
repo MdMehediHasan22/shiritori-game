@@ -33,9 +33,9 @@ function firstLetter(word) {
 
 // ---------- Main Component ----------
 export default function ShiritoriGame() {
-  const [p1Name, setP1Name] = useState("Player 1");
-  const [p2Name, setP2Name] = useState("Player 2");
-  const [turnSeconds, setTurnSeconds] = useState(15);
+  const [p1Name] = useState("Player 1");
+  const [p2Name] = useState("Player 2");
+  const [turnSeconds] = useState(15);
 
   const [scores, setScores] = useState({ p1: 0, p2: 0 });
   const [currentPlayer, setCurrentPlayer] = useState("p1");
