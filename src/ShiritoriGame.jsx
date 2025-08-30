@@ -70,6 +70,7 @@ export default function ShiritoriGame() {
       });
     }, 1000);
     return () => clearInterval(timerRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPlayer, turnSeconds, currentPlayerName]);
 
   // Reset Game
@@ -139,6 +140,7 @@ export default function ShiritoriGame() {
     setInput("");
   }
 
+  // Enter key handling
   useEffect(() => {
     const handler = (e) => {
       if (e.key === "Enter") {
@@ -150,6 +152,7 @@ export default function ShiritoriGame() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
